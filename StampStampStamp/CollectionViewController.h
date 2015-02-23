@@ -10,4 +10,6 @@
 
 @interface CollectionViewController : UICollectionViewController
 
+@property (nonatomic, strong) NSString *year;
+
 @end

@@ -1,8 +1,8 @@
 //
-//  YearCell.h
+//  CollectionCell.h
 //  StampStampStamp
 //
-//  Created by Tawatchai Sunarat on 2/21/15.
+//  Created by Tawatchai Sunarat on 2/23/15.
 //  Copyright (c) 2015 pddk. All rights reserved.
 //
 
@@ -10,6 +10,6 @@
 
 @interface CollectionCell : UICollectionViewCell
 
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

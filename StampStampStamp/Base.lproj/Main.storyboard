@@ -29,14 +29,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QeD-eT-lGj">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="QeD-eT-lGj">
                             <size key="itemSize" width="145" height="130"/>
                             <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="pgr-Or-8eQ" customClass="CollectionCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="pgr-Or-8eQ" customClass="YearCell">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -57,11 +57,11 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="KiL-Z7-2xe" id="hFQ-iY-2pY"/>
-                                    <segue destination="PNL-jW-r0n" kind="show" identifier="" id="Drk-rt-h7S"/>
+                                    <segue destination="PNL-jW-r0n" kind="show" identifier="ShowCollection" id="Drk-rt-h7S"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="N3P-bM-ZDA" customClass="SectionHeader">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="N3P-bM-ZDA" customClass="YearHeader">
                             <rect key="frame" x="0.0" y="64" width="600" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -103,14 +103,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ntr-8q-ORn">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ntr-8q-ORn">
                             <size key="itemSize" width="116" height="93"/>
                             <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="0ST-pK-PF0">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="0ST-pK-PF0" customClass="CollectionCell">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -129,9 +129,12 @@
                                     <constraint firstAttribute="trailing" secondItem="omm-wE-kqw" secondAttribute="trailing" id="HZT-fc-B0M"/>
                                     <constraint firstItem="omm-wE-kqw" firstAttribute="top" secondItem="0ST-pK-PF0" secondAttribute="top" id="z7A-9S-sfX"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="omm-wE-kqw" id="luO-XQ-lUS"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="7Go-GZ-Z29">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="7Go-GZ-Z29" customClass="CollectionHeader">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -150,6 +153,9 @@
                                 <constraint firstAttribute="centerX" secondItem="fee-wD-c7d" secondAttribute="centerX" id="rSi-eX-Hxr"/>
                                 <constraint firstItem="fee-wD-c7d" firstAttribute="leading" secondItem="7Go-GZ-Z29" secondAttribute="leading" id="yYr-y2-reF"/>
                             </constraints>
+                            <connections>
+                                <outlet property="headerLabel" destination="fee-wD-c7d" id="ncz-xX-0iJ"/>
+                            </connections>
                         </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="PNL-jW-r0n" id="ha6-Ii-8z5"/>

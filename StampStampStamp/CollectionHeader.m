@@ -1,13 +1,13 @@
 //
-//  CollectionCell.m
+//  CollectionHeader.m
 //  StampStampStamp
 //
 //  Created by Tawatchai Sunarat on 2/23/15.
 //  Copyright (c) 2015 pddk. All rights reserved.
 //
 
-#import "CollectionCell.h"
+#import "CollectionHeader.h"
 
-@implementation CollectionCell
+@implementation CollectionHeader
 
 @end

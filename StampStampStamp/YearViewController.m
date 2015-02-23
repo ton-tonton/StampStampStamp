@@ -7,12 +7,13 @@
 //
 
 #import "YearViewController.h"
-#import "SectionHeader.h"
-#import "CollectionCell.h"
+#import "YearHeader.h"
+#import "YearCell.h"
+#import "CollectionViewController.h"
 
 static NSArray *years = nil;
 
-@interface YearViewController ()
+@interface YearViewController () <UICollectionViewDelegateFlowLayout>
 
 @end
 
@@ -30,6 +31,15 @@ static NSArray *years = nil;
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - screen
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.collectionView reloadData];
+}
+
 #pragma mark - UICollectionViewDataSource
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -44,7 +54,7 @@ static NSArray *years = nil;
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    YearCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
     NSString *imageName = [NSString stringWithFormat:@"%@.JPG", [years objectAtIndex:indexPath.section]];
     cell.imageView.image = [UIImage imageNamed:imageName];
@@ -54,7 +64,7 @@ static NSArray *years = nil;
 
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
-    SectionHeader *section = [collectionView dequeueReusableSupplementaryViewOfKind:kind
+    YearHeader *section = [collectionView dequeueReusableSupplementaryViewOfKind:kind
                                                                     withReuseIdentifier:@"Header"
                                                                            forIndexPath:indexPath];
     section.headerLabel.text = [years objectAtIndex:indexPath.section];
@@ -69,9 +79,19 @@ static NSArray *years = nil;
     return CGSizeMake(self.collectionView.bounds.size.width, 200);
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+#pragma mark - Navigation
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    return CGSizeMake(self.collectionView.bounds.size.width, 60);
+    if ([[segue identifier] isEqualToString:@"ShowCollection"]) {
+
+        CollectionViewController *cvc = [segue destinationViewController];
+        YearCell *cell = (YearCell *)sender;
+        NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+        NSString *year = [years objectAtIndex:indexPath.section];
+        
+        cvc.year = [year copy];
+    }
 }
 
 @end

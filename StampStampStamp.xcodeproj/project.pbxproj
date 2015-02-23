@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1C914EC21A9B0876006BD32F /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C914EC11A9B0876006BD32F /* CollectionViewController.m */; };
+		1C914EC51A9B0CEE006BD32F /* CollectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C914EC41A9B0CEE006BD32F /* CollectionHeader.m */; };
+		1C914EC81A9B0D0F006BD32F /* CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C914EC71A9B0D0F006BD32F /* CollectionCell.m */; };
 		1CB035DB1A96DE9900C5085E /* 0_full.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1CB035991A96DE9900C5085E /* 0_full.JPG */; };
 		1CB035DC1A96DE9900C5085E /* 10_full.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1CB0359A1A96DE9900C5085E /* 10_full.JPG */; };
 		1CB035DD1A96DE9900C5085E /* 11_full.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1CB0359B1A96DE9900C5085E /* 11_full.JPG */; };
@@ -74,8 +76,8 @@
 		1CB0361A1A96DE9900C5085E /* 9.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1CB035D91A96DE9900C5085E /* 9.JPG */; };
 		1CB0361B1A96DE9900C5085E /* myDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1CB035DA1A96DE9900C5085E /* myDB.sqlite */; };
 		1CDC46431A9865F200BAD726 /* YearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDC46421A9865F200BAD726 /* YearViewController.m */; };
-		1CDC46491A986B6800BAD726 /* CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDC46471A986B6800BAD726 /* CollectionCell.m */; };
-		1CDC464E1A986CAC00BAD726 /* SectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDC464C1A986CAC00BAD726 /* SectionHeader.m */; };
+		1CDC46491A986B6800BAD726 /* YearCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDC46471A986B6800BAD726 /* YearCell.m */; };
+		1CDC464E1A986CAC00BAD726 /* YearHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDC464C1A986CAC00BAD726 /* YearHeader.m */; };
 		1CDC46551A98781D00BAD726 /* 2012.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CDC46511A98781D00BAD726 /* 2012.jpg */; };
 		1CDC46561A98781D00BAD726 /* 2013.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CDC46521A98781D00BAD726 /* 2013.jpg */; };
 		1CDC46571A98781D00BAD726 /* 2014.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CDC46531A98781D00BAD726 /* 2014.jpg */; };
@@ -100,6 +102,10 @@
 /* Begin PBXFileReference section */
 		1C914EC01A9B0876006BD32F /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		1C914EC11A9B0876006BD32F /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		1C914EC31A9B0CEE006BD32F /* CollectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionHeader.h; sourceTree = "<group>"; };
+		1C914EC41A9B0CEE006BD32F /* CollectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionHeader.m; sourceTree = "<group>"; };
+		1C914EC61A9B0D0F006BD32F /* CollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionCell.h; sourceTree = "<group>"; };
+		1C914EC71A9B0D0F006BD32F /* CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionCell.m; sourceTree = "<group>"; };
 		1CB035991A96DE9900C5085E /* 0_full.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0_full.JPG; sourceTree = "<group>"; };
 		1CB0359A1A96DE9900C5085E /* 10_full.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10_full.JPG; sourceTree = "<group>"; };
 		1CB0359B1A96DE9900C5085E /* 11_full.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11_full.JPG; sourceTree = "<group>"; };
@@ -167,10 +173,10 @@
 		1CB035DA1A96DE9900C5085E /* myDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = myDB.sqlite; sourceTree = "<group>"; };
 		1CDC46411A9865F200BAD726 /* YearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearViewController.h; sourceTree = "<group>"; };
 		1CDC46421A9865F200BAD726 /* YearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearViewController.m; sourceTree = "<group>"; };
-		1CDC46461A986B6800BAD726 /* CollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionCell.h; sourceTree = "<group>"; };
-		1CDC46471A986B6800BAD726 /* CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionCell.m; sourceTree = "<group>"; };
-		1CDC464B1A986CAC00BAD726 /* SectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionHeader.h; sourceTree = "<group>"; };
-		1CDC464C1A986CAC00BAD726 /* SectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionHeader.m; sourceTree = "<group>"; };
+		1CDC46461A986B6800BAD726 /* YearCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearCell.h; sourceTree = "<group>"; };
+		1CDC46471A986B6800BAD726 /* YearCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearCell.m; sourceTree = "<group>"; };
+		1CDC464B1A986CAC00BAD726 /* YearHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearHeader.h; sourceTree = "<group>"; };
+		1CDC464C1A986CAC00BAD726 /* YearHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearHeader.m; sourceTree = "<group>"; };
 		1CDC46511A98781D00BAD726 /* 2012.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2012.jpg; sourceTree = "<group>"; };
 		1CDC46521A98781D00BAD726 /* 2013.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2013.jpg; sourceTree = "<group>"; };
 		1CDC46531A98781D00BAD726 /* 2014.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2014.jpg; sourceTree = "<group>"; };
@@ -312,10 +318,14 @@
 		1CDC46441A98660300BAD726 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1CDC464B1A986CAC00BAD726 /* SectionHeader.h */,
-				1CDC464C1A986CAC00BAD726 /* SectionHeader.m */,
-				1CDC46461A986B6800BAD726 /* CollectionCell.h */,
-				1CDC46471A986B6800BAD726 /* CollectionCell.m */,
+				1CDC464B1A986CAC00BAD726 /* YearHeader.h */,
+				1CDC464C1A986CAC00BAD726 /* YearHeader.m */,
+				1CDC46461A986B6800BAD726 /* YearCell.h */,
+				1CDC46471A986B6800BAD726 /* YearCell.m */,
+				1C914EC31A9B0CEE006BD32F /* CollectionHeader.h */,
+				1C914EC41A9B0CEE006BD32F /* CollectionHeader.m */,
+				1C914EC61A9B0D0F006BD32F /* CollectionCell.h */,
+				1C914EC71A9B0D0F006BD32F /* CollectionCell.m */,
 				1CE3FC601A95BF92008837BA /* Main.storyboard */,
 			);
 			name = View;
@@ -570,12 +580,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CDC464E1A986CAC00BAD726 /* SectionHeader.m in Sources */,
+				1CDC464E1A986CAC00BAD726 /* YearHeader.m in Sources */,
 				1CE3FC5C1A95BF92008837BA /* AppDelegate.m in Sources */,
 				1C914EC21A9B0876006BD32F /* CollectionViewController.m in Sources */,
 				1CE3FC591A95BF92008837BA /* main.m in Sources */,
-				1CDC46491A986B6800BAD726 /* CollectionCell.m in Sources */,
+				1CDC46491A986B6800BAD726 /* YearCell.m in Sources */,
+				1C914EC51A9B0CEE006BD32F /* CollectionHeader.m in Sources */,
 				1CDC46431A9865F200BAD726 /* YearViewController.m in Sources */,
+				1C914EC81A9B0D0F006BD32F /* CollectionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
