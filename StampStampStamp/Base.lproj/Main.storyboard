@@ -131,6 +131,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="omm-wE-kqw" id="luO-XQ-lUS"/>
+                                    <segue destination="3Ny-dW-pB2" kind="show" identifier="ShowSeries" id="oou-JF-GVx"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -166,7 +167,56 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ksc-On-9vs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="732" y="396"/>
+            <point key="canvasLocation" x="759" y="396"/>
+        </scene>
+        <!--Series View Controller-->
+        <scene sceneID="WpL-4N-2Mj">
+            <objects>
+                <collectionViewController id="3Ny-dW-pB2" customClass="SeriesViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="g11-ty-111">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vZU-0r-aoH">
+                            <size key="itemSize" width="195" height="161"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="zGz-WE-kiL" customClass="SeriesCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="195" height="161"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NB3-sT-jnl">
+                                            <rect key="frame" x="0.0" y="0.0" width="195" height="161"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="NB3-sT-jnl" firstAttribute="leading" secondItem="zGz-WE-kiL" secondAttribute="leading" id="39F-mK-Jng"/>
+                                    <constraint firstAttribute="trailing" secondItem="NB3-sT-jnl" secondAttribute="trailing" id="5EF-9d-29Y"/>
+                                    <constraint firstItem="NB3-sT-jnl" firstAttribute="top" secondItem="zGz-WE-kiL" secondAttribute="top" id="P0k-Y0-cNI"/>
+                                    <constraint firstAttribute="bottom" secondItem="NB3-sT-jnl" secondAttribute="bottom" id="wIX-eJ-B46"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="NB3-sT-jnl" id="IcE-5x-u1u"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="3Ny-dW-pB2" id="4xh-za-LPg"/>
+                            <outlet property="delegate" destination="3Ny-dW-pB2" id="iex-re-XWc"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="95t-6Z-DuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1452" y="396"/>
         </scene>
     </scenes>
 </document>

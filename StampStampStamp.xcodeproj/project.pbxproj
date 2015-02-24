@@ -82,6 +82,8 @@
 		1CDC46561A98781D00BAD726 /* 2013.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CDC46521A98781D00BAD726 /* 2013.jpg */; };
 		1CDC46571A98781D00BAD726 /* 2014.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CDC46531A98781D00BAD726 /* 2014.jpg */; };
 		1CDC46581A98781D00BAD726 /* 2015.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CDC46541A98781D00BAD726 /* 2015.jpg */; };
+		1CE2BB7B1A9C164200A10AEF /* SeriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2BB7A1A9C164200A10AEF /* SeriesCell.m */; };
+		1CE2BB7E1A9C178A00A10AEF /* SeriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2BB7D1A9C178A00A10AEF /* SeriesViewController.m */; };
 		1CE3FC591A95BF92008837BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE3FC581A95BF92008837BA /* main.m */; };
 		1CE3FC5C1A95BF92008837BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE3FC5B1A95BF92008837BA /* AppDelegate.m */; };
 		1CE3FC621A95BF92008837BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CE3FC601A95BF92008837BA /* Main.storyboard */; };
@@ -181,6 +183,10 @@
 		1CDC46521A98781D00BAD726 /* 2013.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2013.jpg; sourceTree = "<group>"; };
 		1CDC46531A98781D00BAD726 /* 2014.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2014.jpg; sourceTree = "<group>"; };
 		1CDC46541A98781D00BAD726 /* 2015.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2015.jpg; sourceTree = "<group>"; };
+		1CE2BB791A9C164200A10AEF /* SeriesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeriesCell.h; sourceTree = "<group>"; };
+		1CE2BB7A1A9C164200A10AEF /* SeriesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeriesCell.m; sourceTree = "<group>"; };
+		1CE2BB7C1A9C178A00A10AEF /* SeriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeriesViewController.h; sourceTree = "<group>"; };
+		1CE2BB7D1A9C178A00A10AEF /* SeriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeriesViewController.m; sourceTree = "<group>"; };
 		1CE3FC531A95BF92008837BA /* StampStampStamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StampStampStamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CE3FC571A95BF92008837BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CE3FC581A95BF92008837BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -326,6 +332,8 @@
 				1C914EC41A9B0CEE006BD32F /* CollectionHeader.m */,
 				1C914EC61A9B0D0F006BD32F /* CollectionCell.h */,
 				1C914EC71A9B0D0F006BD32F /* CollectionCell.m */,
+				1CE2BB791A9C164200A10AEF /* SeriesCell.h */,
+				1CE2BB7A1A9C164200A10AEF /* SeriesCell.m */,
 				1CE3FC601A95BF92008837BA /* Main.storyboard */,
 			);
 			name = View;
@@ -338,6 +346,8 @@
 				1CDC46421A9865F200BAD726 /* YearViewController.m */,
 				1C914EC01A9B0876006BD32F /* CollectionViewController.h */,
 				1C914EC11A9B0876006BD32F /* CollectionViewController.m */,
+				1CE2BB7C1A9C178A00A10AEF /* SeriesViewController.h */,
+				1CE2BB7D1A9C178A00A10AEF /* SeriesViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -580,6 +590,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CE2BB7B1A9C164200A10AEF /* SeriesCell.m in Sources */,
+				1CE2BB7E1A9C178A00A10AEF /* SeriesViewController.m in Sources */,
 				1CDC464E1A986CAC00BAD726 /* YearHeader.m in Sources */,
 				1CE3FC5C1A95BF92008837BA /* AppDelegate.m in Sources */,
 				1C914EC21A9B0876006BD32F /* CollectionViewController.m in Sources */,

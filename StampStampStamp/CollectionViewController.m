@@ -9,6 +9,9 @@
 #import "CollectionViewController.h"
 #import "CollectionCell.h"
 #import "CollectionHeader.h"
+#import "SeriesViewController.h"
+
+static NSArray *titles;
 
 @interface CollectionViewController () <UICollectionViewDelegateFlowLayout>
 
@@ -28,6 +31,8 @@
     for (int i = 0; i < 8; i++) {
         [self.imagesName addObject:[NSString stringWithFormat:@"%d.JPG", (i + startNumberOfImg)]];
     }
+    
+    titles = @[@"2015 year beast bloom", @"2014 legendary of legion commander", @"2013 god of riki", @"2012 play with me free damage"];
 }
 
 - (void)viewDidLoad {
@@ -74,27 +79,8 @@
     CollectionHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                                                                   withReuseIdentifier:@"Header"
                                                                          forIndexPath:indexPath];
-    
-    NSString *title;
-    switch ([self.year intValue]) {
-        case 2015:
-            title = @"2015 year beast bloom";
-            break;
-        
-        case 2014:
-            title = @"2014 legendary of legion commander";
-            break;
-            
-        case 2013:
-            title = @"2013 god of riki";
-            break;
-            
-        default:
-            title = @"2012 play with me free damage";
-            break;
-    }
-    
-    header.headerLabel.text = title;
+    int index = 2015 - [self.year intValue];
+    header.headerLabel.text = titles[index];
     
     return header;
 }
@@ -106,6 +92,19 @@
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     return CGSizeMake(44, 44);
+}
+
+#pragma mark - Navigation
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"ShowSeries"]) {
+        
+        SeriesViewController *svc = [segue destinationViewController];
+        NSString *title = titles[(2015 - [self.year intValue])];
+        svc.title = title;
+        svc.imagesName = self.imagesName;
+    }
 }
 
 @end
