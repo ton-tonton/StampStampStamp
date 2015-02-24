@@ -29,7 +29,7 @@ static NSArray *titles;
     int startNumberOfImg = (2015 - [self.year intValue]) * 8;
     
     for (int i = 0; i < 8; i++) {
-        [self.imagesName addObject:[NSString stringWithFormat:@"%d.JPG", (i + startNumberOfImg)]];
+        [self.imagesName addObject:[NSString stringWithFormat:@"%d", (i + startNumberOfImg)]];
     }
     
     titles = @[@"2015 year beast bloom", @"2014 legendary of legion commander", @"2013 god of riki", @"2012 play with me free damage"];
@@ -69,7 +69,8 @@ static NSArray *titles;
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.imageView.image = [UIImage imageNamed:[self.imagesName objectAtIndex:indexPath.row]];
+    NSString *imageName = [NSString stringWithFormat:@"%@.JPG", self.imagesName[indexPath.row]];
+    cell.imageView.image = [UIImage imageNamed:imageName];
     
     return cell;
 }

@@ -8,6 +8,7 @@
 
 #import "SeriesViewController.h"
 #import "SeriesCell.h"
+#import "StampViewController.h"
 
 @interface SeriesViewController () <UICollectionViewDelegateFlowLayout>
 
@@ -53,7 +54,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SeriesCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    NSString *imageName = self.imagesName[indexPath.row];
+    NSString *imageName = [NSString stringWithFormat:@"%@.JPG",self.imagesName[indexPath.row]];
     UIImage *image = [UIImage imageNamed:imageName];
     cell.imageView.image = image;
     
@@ -89,7 +90,14 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
+    if ([[segue identifier] isEqualToString:@"ShowStamp"]) {
+        
+        StampViewController *svc = [segue destinationViewController];
+        NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];
+        NSString *imageName = [NSString stringWithFormat:@"%@_full.JPG", self.imagesName[indexPath.row]];
+        UIImage *image = [UIImage imageNamed:imageName];
+        svc.stamp = image;
+    }
 }
 
 

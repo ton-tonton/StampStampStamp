@@ -84,6 +84,7 @@
 		1CDC46581A98781D00BAD726 /* 2015.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CDC46541A98781D00BAD726 /* 2015.jpg */; };
 		1CE2BB7B1A9C164200A10AEF /* SeriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2BB7A1A9C164200A10AEF /* SeriesCell.m */; };
 		1CE2BB7E1A9C178A00A10AEF /* SeriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2BB7D1A9C178A00A10AEF /* SeriesViewController.m */; };
+		1CE2BB811A9C29C400A10AEF /* StampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2BB801A9C29C400A10AEF /* StampViewController.m */; };
 		1CE3FC591A95BF92008837BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE3FC581A95BF92008837BA /* main.m */; };
 		1CE3FC5C1A95BF92008837BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE3FC5B1A95BF92008837BA /* AppDelegate.m */; };
 		1CE3FC621A95BF92008837BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CE3FC601A95BF92008837BA /* Main.storyboard */; };
@@ -187,6 +188,8 @@
 		1CE2BB7A1A9C164200A10AEF /* SeriesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeriesCell.m; sourceTree = "<group>"; };
 		1CE2BB7C1A9C178A00A10AEF /* SeriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeriesViewController.h; sourceTree = "<group>"; };
 		1CE2BB7D1A9C178A00A10AEF /* SeriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeriesViewController.m; sourceTree = "<group>"; };
+		1CE2BB7F1A9C29C400A10AEF /* StampViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StampViewController.h; sourceTree = "<group>"; };
+		1CE2BB801A9C29C400A10AEF /* StampViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StampViewController.m; sourceTree = "<group>"; };
 		1CE3FC531A95BF92008837BA /* StampStampStamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StampStampStamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CE3FC571A95BF92008837BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CE3FC581A95BF92008837BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -348,6 +351,8 @@
 				1C914EC11A9B0876006BD32F /* CollectionViewController.m */,
 				1CE2BB7C1A9C178A00A10AEF /* SeriesViewController.h */,
 				1CE2BB7D1A9C178A00A10AEF /* SeriesViewController.m */,
+				1CE2BB7F1A9C29C400A10AEF /* StampViewController.h */,
+				1CE2BB801A9C29C400A10AEF /* StampViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -600,6 +605,7 @@
 				1C914EC51A9B0CEE006BD32F /* CollectionHeader.m in Sources */,
 				1CDC46431A9865F200BAD726 /* YearViewController.m in Sources */,
 				1C914EC81A9B0D0F006BD32F /* CollectionCell.m in Sources */,
+				1CE2BB811A9C29C400A10AEF /* StampViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
